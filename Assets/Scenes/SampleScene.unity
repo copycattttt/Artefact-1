@@ -296,6 +296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -7.517
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (67)
@@ -418,6 +422,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 17.839
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (36)
@@ -427,6 +435,118 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+--- !u!1 &37120623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37120624}
+  - component: {fileID: 37120627}
+  - component: {fileID: 37120626}
+  - component: {fileID: 37120625}
+  m_Layer: 0
+  m_Name: Cube (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &37120624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37120623}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.1746106, z: 0, w: 0.98463756}
+  m_LocalPosition: {x: 0.1271222, y: 0.553928, z: -0.1106277}
+  m_LocalScale: {x: 0.04553581, y: 0.0053281286, z: 0.00306178}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 806183708}
+  m_LocalEulerAnglesHint: {x: 0, y: -20.112, z: 0}
+--- !u!65 &37120625
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37120623}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &37120626
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37120623}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5cb15dc27fce75f4b965d7bb30f08676, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &37120627
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37120623}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &53305307
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +724,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 18.089
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (17)
@@ -673,6 +797,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -66.633
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (24)
@@ -747,6 +875,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -56.636
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (32)
@@ -979,6 +1111,118 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110588657}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &138114583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 138114584}
+  - component: {fileID: 138114587}
+  - component: {fileID: 138114586}
+  - component: {fileID: 138114585}
+  m_Layer: 0
+  m_Name: Cube (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &138114584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138114583}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.8102156, z: 0, w: 0.58613205}
+  m_LocalPosition: {x: 0.02084, y: 0.553928, z: -0.11101}
+  m_LocalScale: {x: 0.06978135, y: 0.0053281286, z: 0.00306178}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 806183708}
+  m_LocalEulerAnglesHint: {x: 0, y: -108.234, z: 0}
+--- !u!65 &138114585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138114583}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &138114586
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138114583}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5cb15dc27fce75f4b965d7bb30f08676, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &138114587
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138114583}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &143876736
 GameObject:
@@ -1296,6 +1540,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.795
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree
@@ -1482,6 +1730,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -21.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (71)
@@ -1556,6 +1808,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -12.192
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (41)
@@ -1635,6 +1891,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 41.65
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (31)
@@ -1821,6 +2081,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 21.755
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (49)
@@ -2032,6 +2296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 130.132
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (84)
@@ -2106,6 +2374,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 37.16
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (68)
@@ -2185,6 +2457,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -16.768
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (19)
@@ -2254,6 +2530,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -21.3
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (13)
@@ -2323,6 +2603,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -110.235
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (48)
@@ -2529,6 +2813,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 24.735
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (62)
@@ -2842,6 +3130,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (3)
@@ -2911,6 +3203,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 70.067
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (78)
@@ -2985,6 +3281,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (40)
@@ -3166,6 +3466,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 13.977
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (50)
@@ -3240,6 +3544,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 59.368
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (55)
@@ -3314,6 +3622,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 109.86
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (52)
@@ -3383,6 +3695,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -22.048
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (54)
@@ -3467,6 +3783,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 16.771
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (14)
@@ -3541,6 +3861,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 196.229
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (75)
@@ -3849,6 +4173,9 @@ Transform:
   m_Children:
   - {fileID: 100326749}
   - {fileID: 2010367774}
+  - {fileID: 1585956464}
+  - {fileID: 138114584}
+  - {fileID: 37120624}
   - {fileID: 1066413968}
   - {fileID: 472396001}
   - {fileID: 2063124260}
@@ -3859,6 +4186,7 @@ Transform:
   - {fileID: 2017676165}
   - {fileID: 745076903}
   - {fileID: 154021327}
+  - {fileID: 1031755721}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &809097604
@@ -4033,6 +4361,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 16.994
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (10)
@@ -4268,6 +4600,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 106.75
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (43)
@@ -4596,6 +4932,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 148.035
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (64)
@@ -4670,6 +5010,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 14.843
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (12)
@@ -4739,6 +5083,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 87.609
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (79)
@@ -4925,6 +5273,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 77.421
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (2)
@@ -4994,6 +5346,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 56.821
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (6)
@@ -5063,6 +5419,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -89.119
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (66)
@@ -5142,6 +5502,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.405
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (16)
@@ -5440,6 +5804,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 74.903
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (87)
@@ -5514,6 +5882,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (27)
@@ -5583,6 +5955,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -24.35
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (28)
@@ -5709,6 +6085,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
   m_PrefabInstance: {fileID: 69587121}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1031755720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1031755721}
+  m_Layer: 0
+  m_Name: Shop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1031755721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031755720}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1236527925}
+  m_Father: {fileID: 806183708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1048852284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5769,6 +6177,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 42.658
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (58)
@@ -5965,6 +6377,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.501
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (30)
@@ -6034,6 +6450,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 29.36
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (7)
@@ -6141,6 +6561,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.82
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (37)
@@ -6253,6 +6677,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 185.843
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (34)
@@ -6322,6 +6750,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 69.185
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (85)
@@ -6625,6 +7057,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (35)
@@ -7040,6 +7476,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 22.832
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (44)
@@ -7109,6 +7549,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 43.433
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (70)
@@ -7123,6 +7567,118 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
   m_PrefabInstance: {fileID: 1232241206}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1236527924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1236527925}
+  - component: {fileID: 1236527928}
+  - component: {fileID: 1236527927}
+  - component: {fileID: 1236527926}
+  m_Layer: 0
+  m_Name: parking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1236527925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236527924}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.17460924, z: -0, w: 0.98463786}
+  m_LocalPosition: {x: 0.06809998, y: 0.551115, z: -0.10769997}
+  m_LocalScale: {x: 0.09796051, y: 0.0025543852, z: 0.05581914}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1031755721}
+  m_LocalEulerAnglesHint: {x: 0, y: -20.112, z: 0}
+--- !u!65 &1236527926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236527924}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1236527927
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236527924}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 32253c962da66bd4f9a10e360d259730, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1236527928
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236527924}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1237347600 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
@@ -7188,6 +7744,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 27.8
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (23)
@@ -7369,6 +7929,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.239
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (26)
@@ -7555,6 +8119,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 131.731
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (47)
@@ -7624,6 +8192,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 84.973
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (86)
@@ -7698,6 +8270,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 203.867
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (74)
@@ -7772,6 +8348,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 75.288
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (83)
@@ -7846,6 +8426,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (20)
@@ -7915,6 +8499,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 159.934
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (82)
@@ -8106,6 +8694,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -12.767
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (73)
@@ -8409,6 +9001,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -66.633
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (65)
@@ -8483,6 +9079,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -33.291
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (1)
@@ -8557,6 +9157,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 159.427
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (72)
@@ -8631,6 +9235,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 42.714
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (60)
@@ -8705,6 +9313,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 39.288
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (42)
@@ -8774,6 +9386,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -13.958
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (45)
@@ -8843,6 +9459,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 30.821
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (38)
@@ -8852,6 +9472,118 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+--- !u!1 &1585956463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1585956464}
+  - component: {fileID: 1585956467}
+  - component: {fileID: 1585956466}
+  - component: {fileID: 1585956465}
+  m_Layer: 0
+  m_Name: Cube (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1585956464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585956463}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.1746106, z: 0, w: 0.98463756}
+  m_LocalPosition: {x: 0.063544, y: 0.553928, z: -0.1339091}
+  m_LocalScale: {x: 0.06978135, y: 0.0053281286, z: 0.00306178}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 806183708}
+  m_LocalEulerAnglesHint: {x: 0, y: -20.112, z: 0}
+--- !u!65 &1585956465
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585956463}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1585956466
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585956463}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5cb15dc27fce75f4b965d7bb30f08676, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1585956467
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585956463}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1593129832
 GameObject:
   m_ObjectHideFlags: 0
@@ -9029,6 +9761,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (4)
@@ -9098,6 +9834,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -8.629
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (57)
@@ -9172,6 +9912,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -37.814
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (15)
@@ -9241,6 +9985,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 87.481
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (22)
@@ -9310,6 +10058,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 148.035
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (63)
@@ -9384,6 +10136,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 36.737
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (69)
@@ -9804,6 +10560,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 136.358
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (76)
@@ -9883,6 +10643,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 14.21
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (25)
@@ -9952,6 +10716,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 40.131
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (5)
@@ -10021,6 +10789,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -45.501
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (80)
@@ -10212,6 +10984,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 59.368
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (46)
@@ -10281,6 +11057,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 43.905
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (21)
@@ -10350,6 +11130,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (39)
@@ -10419,6 +11203,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -30.29
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (59)
@@ -10498,6 +11286,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (33)
@@ -10567,6 +11359,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -32.043
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (8)
@@ -10865,6 +11661,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 81.169
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (61)
@@ -11066,6 +11866,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 16.994
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (56)
@@ -11135,6 +11939,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 12.417
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (77)
@@ -11214,6 +12022,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 49.894
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (29)
@@ -11397,6 +12209,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 13.977
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (53)
@@ -11466,6 +12282,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -13.209
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (51)
@@ -11535,6 +12355,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 66.211
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (81)
@@ -12137,6 +12961,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 29.909
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (11)
@@ -12206,6 +13034,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 23.223
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (9)
@@ -12275,6 +13107,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 47.417
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca1ded92975b0664f853b50b83d91659, type: 2}
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (18)
