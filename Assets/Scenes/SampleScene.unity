@@ -119,6 +119,106 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &2041644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2041648}
+  - component: {fileID: 2041647}
+  - component: {fileID: 2041646}
+  - component: {fileID: 2041645}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2041645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c638c5a7a8a98674cacb8d7cfc77314a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Movement
+  speed: 10
+  gravity: 20
+  LookSensitivity: 0.6
+  LookAngleLimit: 90
+--- !u!143 &2041646
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041644}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!136 &2041647
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041644}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!4 &2041648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041644}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -107.67, y: 0.417, z: 66.74}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1937642744}
+  - {fileID: 330585546}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2671134
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +231,7 @@ GameObject:
   - component: {fileID: 2671138}
   - component: {fileID: 2671137}
   - component: {fileID: 2671136}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,6 +404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -328,7 +432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 23919586}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,6 +534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -447,7 +555,7 @@ GameObject:
   - component: {fileID: 37120627}
   - component: {fileID: 37120626}
   - component: {fileID: 37120625}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +667,7 @@ GameObject:
   - component: {fileID: 53305311}
   - component: {fileID: 53305310}
   - component: {fileID: 53305309}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,6 +840,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -749,7 +861,7 @@ GameObject:
   - component: {fileID: 83355883}
   - component: {fileID: 83355882}
   - component: {fileID: 83355881}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -917,6 +1029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -995,6 +1111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1012,7 +1132,7 @@ GameObject:
   - component: {fileID: 100326748}
   - component: {fileID: 100326747}
   - component: {fileID: 100326746}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1124,7 +1244,7 @@ GameObject:
   - component: {fileID: 110588661}
   - component: {fileID: 110588660}
   - component: {fileID: 110588659}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1236,7 +1356,7 @@ GameObject:
   - component: {fileID: 138114587}
   - component: {fileID: 138114586}
   - component: {fileID: 138114585}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1348,7 +1468,8 @@ GameObject:
   - component: {fileID: 143876740}
   - component: {fileID: 143876739}
   - component: {fileID: 143876738}
-  m_Layer: 0
+  - component: {fileID: 143876741}
+  m_Layer: 3
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1448,6 +1569,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143876736}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &143876741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143876736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifier
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!4 &160155464 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
@@ -1485,7 +1626,7 @@ GameObject:
   - component: {fileID: 203171886}
   - component: {fileID: 203171885}
   - component: {fileID: 203171884}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1653,6 +1794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1670,7 +1815,7 @@ GameObject:
   - component: {fileID: 228106856}
   - component: {fileID: 228106855}
   - component: {fileID: 228106854}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1843,6 +1988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1920,6 +2069,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2004,6 +2157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21e6fc107f08cad4ca4a0b72968e61bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2082,6 +2239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2099,7 +2260,7 @@ GameObject:
   - component: {fileID: 312672233}
   - component: {fileID: 312672232}
   - component: {fileID: 312672231}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2272,6 +2433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2363,12 +2528,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.485, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2041648}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
@@ -2487,6 +2652,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (84)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2564,6 +2733,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2648,6 +2821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2721,6 +2898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2793,6 +2974,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3004,6 +3189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (62)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3087,6 +3276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21e6fc107f08cad4ca4a0b72968e61bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3114,7 +3307,7 @@ GameObject:
   - component: {fileID: 472396004}
   - component: {fileID: 472396003}
   - component: {fileID: 472396002}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3231,7 +3424,7 @@ GameObject:
   - component: {fileID: 479312104}
   - component: {fileID: 479312103}
   - component: {fileID: 479312102}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3343,7 +3536,7 @@ GameObject:
   - component: {fileID: 500546297}
   - component: {fileID: 500546296}
   - component: {fileID: 500546295}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3511,6 +3704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3583,6 +3780,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3662,6 +3863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3679,7 +3884,7 @@ GameObject:
   - component: {fileID: 570113307}
   - component: {fileID: 570113306}
   - component: {fileID: 570113305}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3847,6 +4052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3924,6 +4133,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4003,6 +4216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4076,6 +4293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4093,7 +4314,7 @@ GameObject:
   - component: {fileID: 621559965}
   - component: {fileID: 621559964}
   - component: {fileID: 621559963}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4220,7 +4441,7 @@ GameObject:
   - component: {fileID: 653429567}
   - component: {fileID: 653429566}
   - component: {fileID: 653429565}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4332,7 +4553,7 @@ GameObject:
   - component: {fileID: 656071493}
   - component: {fileID: 656071492}
   - component: {fileID: 656071491}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4500,6 +4721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4522,7 +4747,7 @@ GameObject:
   - component: {fileID: 684612018}
   - component: {fileID: 684612017}
   - component: {fileID: 684612016}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4690,6 +4915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4712,7 +4941,7 @@ GameObject:
   - component: {fileID: 727561428}
   - component: {fileID: 727561427}
   - component: {fileID: 727561426}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4821,7 +5050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 745076903}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Houses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4858,7 +5087,7 @@ GameObject:
   - component: {fileID: 776081365}
   - component: {fileID: 776081364}
   - component: {fileID: 776081363}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5096,6 +5325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21e6fc107f08cad4ca4a0b72968e61bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5118,7 +5351,7 @@ GameObject:
   - component: {fileID: 809097608}
   - component: {fileID: 809097607}
   - component: {fileID: 809097606}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5286,6 +5519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5357,7 +5594,7 @@ GameObject:
   - component: {fileID: 840883656}
   - component: {fileID: 840883655}
   - component: {fileID: 840883654}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5525,6 +5762,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5547,7 +5788,7 @@ GameObject:
   - component: {fileID: 906708146}
   - component: {fileID: 906708145}
   - component: {fileID: 906708144}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5661,6 +5902,7 @@ GameObject:
   - component: {fileID: 912931657}
   - component: {fileID: 912931662}
   - component: {fileID: 912931661}
+  - component: {fileID: 912931663}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -5757,7 +5999,7 @@ Transform:
   m_GameObject: {fileID: 912931656}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -105.21, y: 2.311, z: 64.98}
+  m_LocalPosition: {x: -40.7, y: 2.311, z: 40.5}
   m_LocalScale: {x: 1.6629, y: 1.6629, z: 1.6629}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5777,6 +6019,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AIBehaviour
   chaseSpeed: 24
   walkSpeed: 12
+  target: {fileID: 2041648}
+  hasLOS: 1
 --- !u!114 &912931662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5789,6 +6033,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114894b00d7c18a48869f8961247bd3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AIController
+--- !u!195 &912931663
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912931656}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &913178641
 GameObject:
   m_ObjectHideFlags: 0
@@ -5801,7 +6067,7 @@ GameObject:
   - component: {fileID: 913178645}
   - component: {fileID: 913178644}
   - component: {fileID: 913178643}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5969,6 +6235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6047,6 +6317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6120,6 +6394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6142,7 +6420,7 @@ GameObject:
   - component: {fileID: 929804519}
   - component: {fileID: 929804518}
   - component: {fileID: 929804517}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6310,6 +6588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6383,6 +6665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6455,6 +6741,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6539,6 +6829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6556,7 +6850,7 @@ GameObject:
   - component: {fileID: 939449579}
   - component: {fileID: 939449578}
   - component: {fileID: 939449577}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6668,7 +6962,7 @@ GameObject:
   - component: {fileID: 944325725}
   - component: {fileID: 944325724}
   - component: {fileID: 944325723}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6836,6 +7130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21e6fc107f08cad4ca4a0b72968e61bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6919,6 +7217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6997,6 +7299,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7070,6 +7376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7087,7 +7397,7 @@ GameObject:
   - component: {fileID: 1017674535}
   - component: {fileID: 1017674534}
   - component: {fileID: 1017674533}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7204,7 +7514,7 @@ GameObject:
   - component: {fileID: 1029029841}
   - component: {fileID: 1029029840}
   - component: {fileID: 1029029839}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7313,7 +7623,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1031755721}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7404,6 +7714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7436,7 +7750,7 @@ GameObject:
   - component: {fileID: 1066413971}
   - component: {fileID: 1066413970}
   - component: {fileID: 1066413969}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7604,6 +7918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7677,6 +7995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7691,7 +8013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1092406521}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7788,6 +8110,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7810,7 +8136,7 @@ GameObject:
   - component: {fileID: 1121784640}
   - component: {fileID: 1121784639}
   - component: {fileID: 1121784638}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7919,7 +8245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1122675481}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8016,6 +8342,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8089,6 +8419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (85)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8116,7 +8450,7 @@ GameObject:
   - component: {fileID: 1148871934}
   - component: {fileID: 1148871933}
   - component: {fileID: 1148871932}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8228,7 +8562,7 @@ GameObject:
   - component: {fileID: 1153719894}
   - component: {fileID: 1153719893}
   - component: {fileID: 1153719892}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8396,6 +8730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8418,7 +8756,7 @@ GameObject:
   - component: {fileID: 1174321460}
   - component: {fileID: 1174321459}
   - component: {fileID: 1174321458}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8530,7 +8868,7 @@ GameObject:
   - component: {fileID: 1181233117}
   - component: {fileID: 1181233116}
   - component: {fileID: 1181233115}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8647,7 +8985,7 @@ GameObject:
   - component: {fileID: 1199068006}
   - component: {fileID: 1199068005}
   - component: {fileID: 1199068004}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8759,7 +9097,7 @@ GameObject:
   - component: {fileID: 1204888620}
   - component: {fileID: 1204888619}
   - component: {fileID: 1204888618}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8927,6 +9265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8999,6 +9341,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 21e6fc107f08cad4ca4a0b72968e61bf, type: 3}
       propertyPath: m_Name
       value: Tree2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21e6fc107f08cad4ca4a0b72968e61bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9078,6 +9424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (70)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9100,7 +9450,7 @@ GameObject:
   - component: {fileID: 1236527928}
   - component: {fileID: 1236527927}
   - component: {fileID: 1236527926}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: parking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9273,6 +9623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9290,7 +9644,7 @@ GameObject:
   - component: {fileID: 1285818197}
   - component: {fileID: 1285818196}
   - component: {fileID: 1285818195}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9458,11 +9812,79 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+--- !u!1 &1312993557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1312993559}
+  - component: {fileID: 1312993558}
+  m_Layer: 0
+  m_Name: NavMesh Surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1312993558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312993557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 7506dc258b63ce84faeb2204ef94f258, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!4 &1312993559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312993557}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -104.7504, y: 3.00089, z: 64.28713}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1321883303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
@@ -9480,7 +9902,7 @@ GameObject:
   - component: {fileID: 1356310288}
   - component: {fileID: 1356310287}
   - component: {fileID: 1356310286}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9592,7 +10014,8 @@ GameObject:
   - component: {fileID: 1361238956}
   - component: {fileID: 1361238955}
   - component: {fileID: 1361238954}
-  m_Layer: 0
+  - component: {fileID: 1361238958}
+  m_Layer: 3
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9692,6 +10115,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 23919586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1361238958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361238953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifier
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1001 &1365127375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9759,6 +10202,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9832,6 +10279,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9911,6 +10362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9988,6 +10443,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (83)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10067,6 +10526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10140,6 +10603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (82)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10167,7 +10634,7 @@ GameObject:
   - component: {fileID: 1448000831}
   - component: {fileID: 1448000830}
   - component: {fileID: 1448000829}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10279,7 +10746,7 @@ GameObject:
   - component: {fileID: 1456673789}
   - component: {fileID: 1456673788}
   - component: {fileID: 1456673787}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10396,7 +10863,7 @@ GameObject:
   - component: {fileID: 1475216564}
   - component: {fileID: 1475216563}
   - component: {fileID: 1475216562}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10564,6 +11031,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21e6fc107f08cad4ca4a0b72968e61bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10642,6 +11113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10664,7 +11139,7 @@ GameObject:
   - component: {fileID: 1541288850}
   - component: {fileID: 1541288849}
   - component: {fileID: 1541288848}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10832,6 +11307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10909,6 +11388,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10988,6 +11471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11066,6 +11553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11138,6 +11629,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11212,6 +11707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11229,7 +11728,7 @@ GameObject:
   - component: {fileID: 1585956467}
   - component: {fileID: 1585956466}
   - component: {fileID: 1585956465}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11341,7 +11840,7 @@ GameObject:
   - component: {fileID: 1593129836}
   - component: {fileID: 1593129835}
   - component: {fileID: 1593129834}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11514,6 +12013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11586,6 +12089,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11665,6 +12172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11738,6 +12249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11810,6 +12325,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11888,6 +12407,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12028,7 +12551,7 @@ GameObject:
   - component: {fileID: 1672449527}
   - component: {fileID: 1672449526}
   - component: {fileID: 1672449525}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12145,7 +12668,7 @@ GameObject:
   - component: {fileID: 1700740957}
   - component: {fileID: 1700740956}
   - component: {fileID: 1700740955}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12313,6 +12836,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12396,6 +12923,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12469,6 +13000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12541,6 +13076,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 21e6fc107f08cad4ca4a0b72968e61bf, type: 3}
       propertyPath: m_Name
       value: Tree2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21e6fc107f08cad4ca4a0b72968e61bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12620,6 +13159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12642,7 +13185,7 @@ GameObject:
   - component: {fileID: 1764392908}
   - component: {fileID: 1764392907}
   - component: {fileID: 1764392906}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12754,7 +13297,7 @@ GameObject:
   - component: {fileID: 1786385625}
   - component: {fileID: 1786385624}
   - component: {fileID: 1786385623}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12927,6 +13470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21e6fc107f08cad4ca4a0b72968e61bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13005,6 +13552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13077,6 +13628,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13151,6 +13706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13224,6 +13783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13246,7 +13809,7 @@ GameObject:
   - component: {fileID: 1826032629}
   - component: {fileID: 1826032628}
   - component: {fileID: 1826032627}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13419,6 +13982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13492,6 +14059,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13509,7 +14080,7 @@ GameObject:
   - component: {fileID: 1879351654}
   - component: {fileID: 1879351653}
   - component: {fileID: 1879351652}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13626,7 +14197,7 @@ GameObject:
   - component: {fileID: 1892069069}
   - component: {fileID: 1892069068}
   - component: {fileID: 1892069067}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13794,6 +14365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13826,7 +14401,7 @@ GameObject:
   - component: {fileID: 1920657513}
   - component: {fileID: 1920657512}
   - component: {fileID: 1920657511}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13999,6 +14574,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14071,6 +14650,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14155,6 +14738,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14171,37 +14758,13 @@ GameObject:
   - component: {fileID: 1937642744}
   - component: {fileID: 1937642743}
   - component: {fileID: 1937642742}
-  - component: {fileID: 1937642741}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1937642741
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937642740}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1937642742
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14267,13 +14830,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937642740}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.2377044, z: -0, w: 0.9713376}
-  m_LocalPosition: {x: -107.6089, y: 1.807, z: 63.30304}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -27.502, z: 0}
+  m_Father: {fileID: 2041648}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1945550619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14341,6 +14904,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 21e6fc107f08cad4ca4a0b72968e61bf, type: 3}
       propertyPath: m_Name
       value: Tree2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21e6fc107f08cad4ca4a0b72968e61bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14420,6 +14987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14492,6 +15063,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
       propertyPath: m_Name
       value: PineTree (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14566,6 +15141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (81)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14621,7 +15200,7 @@ GameObject:
   - component: {fileID: 2010367773}
   - component: {fileID: 2010367772}
   - component: {fileID: 2010367771}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14733,7 +15312,7 @@ GameObject:
   - component: {fileID: 2015130003}
   - component: {fileID: 2015130002}
   - component: {fileID: 2015130001}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14845,7 +15424,7 @@ GameObject:
   - component: {fileID: 2015418144}
   - component: {fileID: 2015418143}
   - component: {fileID: 2015418142}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14954,7 +15533,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2017676165}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Roads
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14999,7 +15578,7 @@ GameObject:
   - component: {fileID: 2039549156}
   - component: {fileID: 2039549155}
   - component: {fileID: 2039549154}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15116,7 +15695,7 @@ GameObject:
   - component: {fileID: 2063124263}
   - component: {fileID: 2063124262}
   - component: {fileID: 2063124261}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15225,7 +15804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2065549779}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15355,7 +15934,7 @@ GameObject:
   - component: {fileID: 2075807844}
   - component: {fileID: 2075807843}
   - component: {fileID: 2075807842}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15523,6 +16102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15540,7 +16123,7 @@ GameObject:
   - component: {fileID: 2091630125}
   - component: {fileID: 2091630124}
   - component: {fileID: 2091630123}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15708,6 +16291,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15781,6 +16368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15795,9 +16386,9 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 330585546}
   - {fileID: 1653745052}
+  - {fileID: 1312993559}
   - {fileID: 2003928841}
   - {fileID: 806183708}
   - {fileID: 912931660}
-  - {fileID: 1937642744}
+  - {fileID: 2041648}
