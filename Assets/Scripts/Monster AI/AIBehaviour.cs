@@ -3,30 +3,73 @@ using UnityEngine.AI;
 
 public class AIBehaviour : MonoBehaviour
 {
-    [Header("Movement")]
-    [SerializeField] private float chaseSpeed;
+    private AIController aiController;
+
+    [Header("Stats")]
     [SerializeField] private float walkSpeed;
+    [SerializeField] private float chaseSpeed;
+    [SerializeField] private float angularBase;
     private float currentSpeed;
 
     [Header("AI")]
-    [SerializeField] private Transform target;
+    public Vector3 target;
     [SerializeField] private bool hasLOS;
     private NavMeshAgent agent;
     private float distance;
 
+    [Header("Random Movement")]
+    [SerializeField] private float stoppingRange;
+    public float randomPointRange;
+
+    [Header("Tunnels")]
+    [SerializeField] private GameObject tunnelHolePrefab;
+    [SerializeField] private GameObject[] tunnelHoles;
+    [SerializeField] private GameObject currentTunnel;
+    [SerializeField] private float tunnelTravelTime;
+
     void Start()
     {
-        currentSpeed = walkSpeed;
+        aiController = GetComponent<AIController>();
         agent = GetComponent<NavMeshAgent>();
+
+        target = aiController.DecideNextLocation(randomPointRange);
+        agent.SetDestination(target);
+
+        currentSpeed = walkSpeed;
     }
 
     void Update()
     {
-        distance = Vector3.Distance(agent.transform.position, target.position);
+        //handle the speed of the player
+        agent.speed = currentSpeed;
+        agent.angularSpeed = angularBase * currentSpeed;
+
+        distance = Vector3.Distance(agent.transform.position, target);
 
         if (hasLOS)
         {
-            agent.destination = target.position;
+            target = aiController.player.position;
+            agent.destination = target;
+            StartChaseBehaviour();
         }
+        else
+        {         
+            if (distance < stoppingRange)
+            {
+                EndChaseBehaviour();
+
+                aiController.ChooseAction();
+            }
+        }
+    }
+
+    public void StartChaseBehaviour()
+    {
+        currentSpeed = chaseSpeed;
+    }
+
+    public void EndChaseBehaviour()
+    {
+        currentSpeed = walkSpeed;
     }
 }
