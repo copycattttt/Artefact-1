@@ -18,7 +18,7 @@ public class AIBehaviour : MonoBehaviour
     private float distance;
 
     [Header("Random Movement")]
-    [SerializeField] private float stoppingRange;
+    public float stoppingRange;
     public float randomPointRange;
 
     [Header("Tunnels")]
@@ -46,7 +46,7 @@ public class AIBehaviour : MonoBehaviour
         agent.speed = currentSpeed;
         agent.angularSpeed = angularBase * currentSpeed;
 
-        distance = Vector3.Distance(agent.transform.position, target);
+        distance = Vector3.Distance(transform.position, target);
 
         if (hasLOS)
         {
@@ -68,7 +68,7 @@ public class AIBehaviour : MonoBehaviour
 
         for (int i = 0; i < tunnelHoles.Length; i++)
         {
-            float distance = Vector3.Distance(agent.transform.position, tunnelHoles[i].transform.position);
+            float distance = Vector3.Distance(transform.position, tunnelHoles[i].transform.position);
 
             if (smallestDist == 0)
             {

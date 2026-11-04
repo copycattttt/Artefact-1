@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor.Searcher;
 using UnityEngine;
 using UnityEngine.AI;
@@ -44,7 +45,7 @@ public class AIController : MonoBehaviour
         if (FrontStage)
         {
             //handles pushing the ai into an area near the player
-            float distance = Vector3.Distance(agent.transform.position, player.position);
+            float distance = Vector3.Distance(transform.position, player.position);
 
             if (distance > playerRange)
             {
@@ -118,8 +119,19 @@ public class AIController : MonoBehaviour
         switch (bestOption)
         {
             case "Search":
-                aiBehaviour.target = DecideNextLocation(aiBehaviour.randomPointRange);
-                agent.SetDestination(aiBehaviour.target);
+                float distance = Vector3.Distance(transform.position, aiBehaviour.target);
+                Debug.Log(distance);
+
+                if (distance < aiBehaviour.stoppingRange)
+                {
+                    aiBehaviour.target = DecideNextLocation(aiBehaviour.randomPointRange);
+                    agent.SetDestination(aiBehaviour.target);
+                }
+                else
+                {
+                    agent.SetDestination(aiBehaviour.target);
+                }
+
                 break;
             case "Tunnel":
                 break;
@@ -146,11 +158,9 @@ public class AIController : MonoBehaviour
         else if (pushTowardsPlayer)
         {
             float playerTunnelDist = 0f;
+            aiBehaviour.target = DecideNextLocation(aiBehaviour.randomPointRange);
 
-            //distance to closest tunnel, closest tunnel to player, distance to next location
-            preDecided = true;
-            float newPointDist = Vector3.Distance(agent.transform.position, aiBehaviour.target);
-
+            //Gets the closest tunnel hole to the player
             for (int i = 0; i < aiBehaviour.tunnelHoles.Length; i++)
             {
                 float distance = Vector3.Distance(player.transform.position, aiBehaviour.tunnelHoles[i].transform.position);
@@ -165,7 +175,9 @@ public class AIController : MonoBehaviour
                 }
             }
 
-            if (playerTunnelDist * 1.5f < Vector3.Distance(agent.transform.position, aiBehaviour.closestTunnel.position))
+            float tunnelDist = Vector3.Distance(transform.position, aiBehaviour.closestTunnel.position);
+
+            if (tunnelDist + playerTunnelDist * 1.5f < Vector3.Distance(transform.position, aiBehaviour.target))
             {
                 newScore = 5f;
             }
@@ -173,7 +185,7 @@ public class AIController : MonoBehaviour
         else
         {
             //distance to closest tunnel, time in area
-            smallestDist = Vector3.Distance(agent.transform.position, aiBehaviour.closestTunnel.position);
+            smallestDist = Vector3.Distance(transform.position, aiBehaviour.closestTunnel.position);
 
             float distValue = smallestDist * 0.00025f;
             newScore = aiBehaviour.areaTime * distValue;
@@ -189,7 +201,7 @@ public class AIController : MonoBehaviour
 
         if (aiBehaviour.tunnelHoles.Length < maxTunnels)
         {
-            smallestDist = Vector3.Distance(agent.transform.position, aiBehaviour.closestTunnel.position);
+            smallestDist = Vector3.Distance(transform.position, aiBehaviour.closestTunnel.position);
 
             float tunnelsLeft = maxTunnels / aiBehaviour.tunnelHoles.Length;
             float distValue = smallestDist * 0.025f;
@@ -218,7 +230,7 @@ public class AIController : MonoBehaviour
             while (distance < minRangeFromPlayer)
             {
                 target = RandomNavmeshLocation(playerRange, player.position);
-                distance = Vector3.Distance(agent.transform.position, target);
+                distance = Vector3.Distance(transform.position, target);
 
                 if (distance > minRangeFromPlayer)
                 {
