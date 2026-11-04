@@ -22,10 +22,12 @@ public class AIBehaviour : MonoBehaviour
     public float randomPointRange;
 
     [Header("Tunnels")]
+    public GameObject[] tunnelHoles;
     [SerializeField] private GameObject tunnelHolePrefab;
-    [SerializeField] private GameObject[] tunnelHoles;
-    [SerializeField] private GameObject currentTunnel;
+    public Transform closestTunnel;
+    private Transform oldClosestTunnel;
     [SerializeField] private float tunnelTravelTime;
+    public float areaTime;
 
     void Start()
     {
@@ -60,6 +62,34 @@ public class AIBehaviour : MonoBehaviour
 
                 aiController.ChooseAction();
             }
+        }
+
+        float smallestDist = 0f;
+
+        for (int i = 0; i < tunnelHoles.Length; i++)
+        {
+            float distance = Vector3.Distance(agent.transform.position, tunnelHoles[i].transform.position);
+
+            if (smallestDist == 0)
+            {
+                smallestDist = distance;
+                closestTunnel = tunnelHoles[i].transform;
+            }
+            else if (distance < smallestDist)
+            {
+                smallestDist = distance;
+                closestTunnel = tunnelHoles[i].transform;
+            }
+        }
+
+        if (closestTunnel == oldClosestTunnel)
+        {
+            areaTime += 1 * Time.deltaTime;
+        }
+        else
+        {
+            areaTime = 0f;
+            oldClosestTunnel = closestTunnel;
         }
     }
 

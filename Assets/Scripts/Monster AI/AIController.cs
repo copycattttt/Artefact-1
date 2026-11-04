@@ -16,18 +16,26 @@ public class AIController : MonoBehaviour
     [SerializeField] private string bestOption;
     [SerializeField] private bool isChasing;
 
+    [Header("Tunnels")]
+    [SerializeField] private int maxTunnels;
+
     [Header("Stage Control")]
     public bool FrontStage;
     [SerializeField] private bool pushTowardsPlayer;
+    [SerializeField] private float pushTowardsCDReset;
+    private float pushTowardsCoolDown;
     [SerializeField] private float playerRange;
     [SerializeField] private float minRangeFromPlayer;
     [SerializeField] private float frontStageTimerMax;
     [SerializeField] private float frontStageTimer;
+    private bool preDecided;
 
     private void Start()
     {
         aiBehaviour = GetComponent<AIBehaviour>();
         agent = GetComponent<NavMeshAgent>();
+
+        pushTowardsCoolDown = pushTowardsCDReset;
     }
 
     private void Update()
@@ -40,7 +48,15 @@ public class AIController : MonoBehaviour
 
             if (distance > playerRange)
             {
-                pushTowardsPlayer = true;
+                if (pushTowardsCoolDown <= 0)
+                {
+                    pushTowardsPlayer = true;
+                    pushTowardsCoolDown = pushTowardsCDReset;
+                }
+                else
+                {
+                    pushTowardsCoolDown -= 1 * Time.deltaTime;
+                }
             }
             else
             {
@@ -81,14 +97,17 @@ public class AIController : MonoBehaviour
         }
         else
         {
+            possibleActions[0].score = ScoreSearching();
+            possibleActions[1].score = ScoreTunnel();
+            possibleActions[2].score = ScoreMakeTunnel();
             possibleActions[3].score = 0;
             possibleActions[4].score = 0;
         }
 
+        float bestScore = 0;
+
         for (int i = 0; i < possibleActions.Length; i++)
         {
-            float bestScore = 0;
-
             if (bestScore < possibleActions[i].score)
             {
                 bestScore = possibleActions[i].score;
@@ -99,8 +118,16 @@ public class AIController : MonoBehaviour
         switch (bestOption)
         {
             case "Search":
-                aiBehaviour.target = DecideNextLocation(aiBehaviour.randomPointRange);
-                agent.SetDestination(aiBehaviour.target);
+                if (!preDecided)
+                {
+                    aiBehaviour.target = DecideNextLocation(aiBehaviour.randomPointRange);
+                    agent.SetDestination(aiBehaviour.target);
+                }
+                else
+                {
+                    agent.SetDestination(aiBehaviour.target);
+                    preDecided = false;
+                }
                 break;
             case "Tunnel":
                 break;
@@ -113,6 +140,79 @@ public class AIController : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    private float ScoreTunnel()
+    {
+        float newScore = 0f;
+        float smallestDist = 0f;
+
+        if (!FrontStage)
+        {
+            newScore = 100f;
+        }
+        else if (pushTowardsPlayer)
+        {
+            float playerTunnelDist = 0f;
+
+            //distance to closest tunnel, closest tunnel to player, distance to next location
+            preDecided = true;
+            float newPointDist = Vector3.Distance(agent.transform.position, aiBehaviour.target);
+
+            for (int i = 0; i < aiBehaviour.tunnelHoles.Length; i++)
+            {
+                float distance = Vector3.Distance(player.transform.position, aiBehaviour.tunnelHoles[i].transform.position);
+
+                if (playerTunnelDist == 0)
+                {
+                    playerTunnelDist = distance;
+                }
+                else if (distance < playerTunnelDist)
+                {
+                    playerTunnelDist = distance;
+                }
+            }
+
+            if (playerTunnelDist * 1.5f < Vector3.Distance(agent.transform.position, aiBehaviour.closestTunnel.position))
+            {
+                newScore = 5f;
+            }
+        }
+        else
+        {
+            //distance to closest tunnel, time in area
+            smallestDist = Vector3.Distance(agent.transform.position, aiBehaviour.closestTunnel.position);
+
+            float distValue = smallestDist * 0.00025f;
+            newScore = aiBehaviour.areaTime * distValue;
+        }
+
+        return newScore;
+    }
+
+    private float ScoreMakeTunnel()
+    {
+        float newScore = 0f;
+        float smallestDist = 0f;
+
+        if (aiBehaviour.tunnelHoles.Length < maxTunnels)
+        {
+            smallestDist = Vector3.Distance(agent.transform.position, aiBehaviour.closestTunnel.position);
+
+            float tunnelsLeft = maxTunnels - aiBehaviour.tunnelHoles.Length;
+            float distValue = smallestDist * 0.025f;
+
+            newScore = tunnelsLeft / distValue;
+        }
+
+        return newScore;
+    }
+
+    private float ScoreSearching()
+    {
+        float newScore =  2 * frontStageTimer;
+
+        return newScore;
     }
 
     //Random movement functions
