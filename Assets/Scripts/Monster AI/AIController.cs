@@ -97,7 +97,7 @@ public class AIController : MonoBehaviour
         }
         else
         {
-            possibleActions[0].score = ScoreSearching();
+            possibleActions[0].score = 2f;
             possibleActions[1].score = ScoreTunnel();
             possibleActions[2].score = ScoreMakeTunnel();
             possibleActions[3].score = 0;
@@ -118,16 +118,8 @@ public class AIController : MonoBehaviour
         switch (bestOption)
         {
             case "Search":
-                if (!preDecided)
-                {
-                    aiBehaviour.target = DecideNextLocation(aiBehaviour.randomPointRange);
-                    agent.SetDestination(aiBehaviour.target);
-                }
-                else
-                {
-                    agent.SetDestination(aiBehaviour.target);
-                    preDecided = false;
-                }
+                aiBehaviour.target = DecideNextLocation(aiBehaviour.randomPointRange);
+                agent.SetDestination(aiBehaviour.target);
                 break;
             case "Tunnel":
                 break;
@@ -199,18 +191,11 @@ public class AIController : MonoBehaviour
         {
             smallestDist = Vector3.Distance(agent.transform.position, aiBehaviour.closestTunnel.position);
 
-            float tunnelsLeft = maxTunnels - aiBehaviour.tunnelHoles.Length;
+            float tunnelsLeft = maxTunnels / aiBehaviour.tunnelHoles.Length;
             float distValue = smallestDist * 0.025f;
 
-            newScore = tunnelsLeft / distValue;
+            newScore = distValue / tunnelsLeft;
         }
-
-        return newScore;
-    }
-
-    private float ScoreSearching()
-    {
-        float newScore =  2 * frontStageTimer;
 
         return newScore;
     }
