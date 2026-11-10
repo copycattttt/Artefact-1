@@ -1,9 +1,12 @@
+using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class AIBehaviour : MonoBehaviour
 {
     private AIController aiController;
+    [SerializeField] private GameObject model;
 
     [Header("Stats")]
     [SerializeField] private float walkSpeed;
@@ -24,8 +27,10 @@ public class AIBehaviour : MonoBehaviour
     [Header("Tunnels")]
     public GameObject[] tunnelHoles;
     [SerializeField] private GameObject tunnelHolePrefab;
+    public Transform targetTunnel;
     public Transform closestTunnel;
     private Transform oldClosestTunnel;
+    private int tunnelMode;
     [SerializeField] private float tunnelTravelTime;
     public float areaTime;
 
@@ -46,26 +51,34 @@ public class AIBehaviour : MonoBehaviour
         agent.speed = currentSpeed;
         agent.angularSpeed = angularBase * currentSpeed;
 
-        distance = Vector3.Distance(transform.position, target);
+        distance = Vector3.Distance(transform.position, agent.destination);
 
+        //checks if it can see the player
         if (hasLOS)
         {
             target = aiController.player.position;
-            agent.destination = target;
+            agent.SetDestination(target);
             StartChaseBehaviour();
         }
         else
         {         
-            if (distance < stoppingRange)
+            if (distance < stoppingRange && tunnelMode == 0)
             {
                 EndChaseBehaviour();
 
                 aiController.ChooseAction();
             }
+            else if (distance < stoppingRange && tunnelMode == 1)
+            {
+                model.SetActive(false);
+                Invoke("TunnelLogic", tunnelTravelTime);
+                tunnelMode = 2;
+            }
         }
 
         float smallestDist = 0f;
 
+        //keeps track of closest tunnel
         for (int i = 0; i < tunnelHoles.Length; i++)
         {
             float distance = Vector3.Distance(transform.position, tunnelHoles[i].transform.position);
@@ -82,6 +95,7 @@ public class AIBehaviour : MonoBehaviour
             }
         }
 
+        //handles incrementing and reseting area time
         if (closestTunnel == oldClosestTunnel)
         {
             areaTime += 1 * Time.deltaTime;
@@ -93,6 +107,57 @@ public class AIBehaviour : MonoBehaviour
         }
     }
 
+    //logic for the tunnel system
+    public void StartTunnel()
+    {
+        agent.SetDestination(closestTunnel.position);
+        tunnelMode = 1;
+    }
+
+    private void TunnelLogic()
+    {
+        if (targetTunnel == null)
+        {
+            int randTunnel = UnityEngine.Random.Range(0, tunnelHoles.Length);
+            targetTunnel = tunnelHoles[randTunnel].transform;
+
+            while (targetTunnel == closestTunnel)
+            {
+                randTunnel = UnityEngine.Random.Range(0, tunnelHoles.Length);
+                targetTunnel = tunnelHoles[randTunnel].transform;
+
+                if (targetTunnel != closestTunnel)
+                {
+                    break;
+                }
+            }
+
+            agent.SetDestination(targetTunnel.position);
+        }
+
+        //moves player to the target tunnel
+        transform.position = targetTunnel.position;
+
+        //prevents weird infinite tunnel loop
+        closestTunnel = targetTunnel;
+
+        //makes the monster visible and resets everything out of tunnelMode
+        model.SetActive(true);
+        tunnelMode = 0;
+        targetTunnel = null;
+
+        //prevents ai from heading back to where it was patrolling before
+        target = transform.position;
+        agent.SetDestination(target);
+    }
+
+    //logic for making tunnels
+    public void MakeTunnel()
+    {
+
+    }
+
+    //handles which behaviours to use
     public void StartChaseBehaviour()
     {
         currentSpeed = chaseSpeed;

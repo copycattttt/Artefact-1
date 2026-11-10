@@ -4678,7 +4678,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1709939323177338109, guid: 246ab9c343a9a684ead9fd4a51de1358, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 65.7
+      value: -112.3
       objectReference: {fileID: 0}
     - target: {fileID: 1709939323177338109, guid: 246ab9c343a9a684ead9fd4a51de1358, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4686,7 +4686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1709939323177338109, guid: 246ab9c343a9a684ead9fd4a51de1358, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 198.8
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 1709939323177338109, guid: 246ab9c343a9a684ead9fd4a51de1358, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6066,40 +6066,13 @@ GameObject:
   - component: {fileID: 912931660}
   - component: {fileID: 912931659}
   - component: {fileID: 912931658}
-  - component: {fileID: 912931657}
-  - component: {fileID: 912931662}
-  - component: {fileID: 912931661}
-  - component: {fileID: 912931663}
   m_Layer: 0
-  m_Name: Monster
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &912931657
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912931656}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &912931658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6165,95 +6138,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912931656}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.62, y: 2.311, z: 37.73}
-  m_LocalScale: {x: 1.6629, y: 1.6629, z: 1.6629}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1851120806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &912931661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912931656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be001d4f7bffc544f974edcd57676332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AIBehaviour
-  walkSpeed: 12
-  chaseSpeed: 24
-  angularBase: 100
-  target: {x: 0, y: 0, z: 0}
-  hasLOS: 0
-  stoppingRange: 2
-  randomPointRange: 40
-  tunnelHoles:
-  - {fileID: 928780996}
-  - {fileID: 659154536}
-  tunnelHolePrefab: {fileID: 0}
-  closestTunnel: {fileID: 0}
-  tunnelTravelTime: 0
-  areaTime: 0
---- !u!114 &912931662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912931656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 114894b00d7c18a48869f8961247bd3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AIController
-  player: {fileID: 2041648}
-  possibleActions:
-  - optionName: Search
-    score: 1
-  - optionName: Tunnel
-    score: 0
-  - optionName: MakeTunnel
-    score: 0
-  - optionName: ChargePlayer
-    score: 0
-  - optionName: CutOffPlayer
-    score: 0
-  bestOption: 
-  isChasing: 0
-  maxTunnels: 5
-  FrontStage: 0
-  pushTowardsPlayer: 0
-  pushTowardsCDReset: 0
-  playerRange: 100
-  minRangeFromPlayer: 30
-  frontStageTimerMax: 120
-  frontStageTimer: 0
---- !u!195 &912931663
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912931656}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &913178641
 GameObject:
   m_ObjectHideFlags: 0
@@ -6610,6 +6501,11 @@ Transform:
 --- !u!1 &928780996 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2832693300036178747, guid: 246ab9c343a9a684ead9fd4a51de1358, type: 3}
+  m_PrefabInstance: {fileID: 3399447444041964368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &928780999 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1709939323177338109, guid: 246ab9c343a9a684ead9fd4a51de1358, type: 3}
   m_PrefabInstance: {fileID: 3399447444041964368}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &929804515
@@ -14114,6 +14010,149 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 374a558a4fdc1904faba63f3bdb56bd1, type: 3}
   m_PrefabInstance: {fileID: 1415377440}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1851120801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1851120806}
+  - component: {fileID: 1851120805}
+  - component: {fileID: 1851120804}
+  - component: {fileID: 1851120803}
+  - component: {fileID: 1851120802}
+  m_Layer: 0
+  m_Name: Monster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!195 &1851120802
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851120801}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1851120803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851120801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be001d4f7bffc544f974edcd57676332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AIBehaviour
+  model: {fileID: 912931656}
+  walkSpeed: 12
+  chaseSpeed: 24
+  angularBase: 100
+  target: {x: 0, y: 0, z: 0}
+  hasLOS: 0
+  stoppingRange: 2
+  randomPointRange: 40
+  tunnelHoles:
+  - {fileID: 928780996}
+  - {fileID: 659154536}
+  tunnelHolePrefab: {fileID: 2832693300036178747, guid: 246ab9c343a9a684ead9fd4a51de1358, type: 3}
+  targetTunnel: {fileID: 0}
+  closestTunnel: {fileID: 928780999}
+  tunnelTravelTime: 4
+  areaTime: 0
+--- !u!114 &1851120804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851120801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114894b00d7c18a48869f8961247bd3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AIController
+  player: {fileID: 2041648}
+  possibleActions:
+  - optionName: Search
+    score: 1
+  - optionName: Tunnel
+    score: 0
+  - optionName: MakeTunnel
+    score: 0
+  - optionName: ChargePlayer
+    score: 0
+  - optionName: CutOffPlayer
+    score: 0
+  bestOption: 
+  isChasing: 0
+  maxTunnels: 5
+  FrontStage: 0
+  pushTowardsPlayer: 0
+  pushTowardsCDReset: 80
+  playerRange: 100
+  minRangeFromPlayer: 30
+  frontStageTimerMax: 120
+  frontStageTimer: 0
+--- !u!136 &1851120805
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851120801}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1851120806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851120801}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 53.3, y: 1.414, z: 130.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 912931660}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1861079524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16682,7 +16721,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1709939323177338109, guid: 246ab9c343a9a684ead9fd4a51de1358, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 62.24
+      value: 57.9
       objectReference: {fileID: 0}
     - target: {fileID: 1709939323177338109, guid: 246ab9c343a9a684ead9fd4a51de1358, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16690,7 +16729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1709939323177338109, guid: 246ab9c343a9a684ead9fd4a51de1358, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 134.5
+      value: 129.5
       objectReference: {fileID: 0}
     - target: {fileID: 1709939323177338109, guid: 246ab9c343a9a684ead9fd4a51de1358, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16737,7 +16776,7 @@ SceneRoots:
   - {fileID: 1312993559}
   - {fileID: 2003928841}
   - {fileID: 806183708}
-  - {fileID: 912931660}
+  - {fileID: 1851120806}
   - {fileID: 2041648}
   - {fileID: 3399447444041964368}
   - {fileID: 659154535}

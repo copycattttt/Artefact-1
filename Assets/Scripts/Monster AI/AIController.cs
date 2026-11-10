@@ -119,8 +119,7 @@ public class AIController : MonoBehaviour
         switch (bestOption)
         {
             case "Search":
-                float distance = Vector3.Distance(transform.position, aiBehaviour.target);
-                Debug.Log(distance);
+                float distance = Vector3.Distance(transform.position, aiBehaviour.target);                
 
                 if (distance < aiBehaviour.stoppingRange)
                 {
@@ -134,8 +133,10 @@ public class AIController : MonoBehaviour
 
                 break;
             case "Tunnel":
+                aiBehaviour.StartTunnel();
                 break;
             case "MakeTunnel":
+                aiBehaviour.MakeTunnel();
                 break;
             case "ChargePlayer":
                 break;
@@ -150,6 +151,8 @@ public class AIController : MonoBehaviour
     {
         float newScore = 0f;
         float smallestDist = 0f;
+
+        Transform newTarget = null;
 
         if (!FrontStage)
         {
@@ -168,10 +171,12 @@ public class AIController : MonoBehaviour
                 if (playerTunnelDist == 0)
                 {
                     playerTunnelDist = distance;
+                    newTarget = aiBehaviour.tunnelHoles[i].transform;
                 }
                 else if (distance < playerTunnelDist)
                 {
                     playerTunnelDist = distance;
+                    newTarget = aiBehaviour.tunnelHoles[i].transform;
                 }
             }
 
@@ -180,11 +185,11 @@ public class AIController : MonoBehaviour
             if (tunnelDist + playerTunnelDist * 1.5f < Vector3.Distance(transform.position, aiBehaviour.target))
             {
                 newScore = 5f;
+                aiBehaviour.targetTunnel = newTarget;
             }
         }
         else
         {
-            //distance to closest tunnel, time in area
             smallestDist = Vector3.Distance(transform.position, aiBehaviour.closestTunnel.position);
 
             float distValue = smallestDist * 0.00025f;
@@ -242,7 +247,7 @@ public class AIController : MonoBehaviour
         return target;
     }
 
-    public Vector3 RandomNavmeshLocation(float radius, Vector3 basePosition)
+    private Vector3 RandomNavmeshLocation(float radius, Vector3 basePosition)
     {
         Vector3 randomDirection = Random.insideUnitSphere * radius;
         randomDirection += basePosition;
