@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
@@ -25,7 +26,8 @@ public class AIBehaviour : MonoBehaviour
     public float randomPointRange;
 
     [Header("Tunnels")]
-    public GameObject[] tunnelHoles;
+    public List<GameObject> tunnelHoles;
+    [SerializeField] private Transform newTunnelPos;
     [SerializeField] private GameObject tunnelHolePrefab;
     public Transform targetTunnel;
     public Transform closestTunnel;
@@ -79,7 +81,7 @@ public class AIBehaviour : MonoBehaviour
         float smallestDist = 0f;
 
         //keeps track of closest tunnel
-        for (int i = 0; i < tunnelHoles.Length; i++)
+        for (int i = 0; i < tunnelHoles.Count; i++)
         {
             float distance = Vector3.Distance(transform.position, tunnelHoles[i].transform.position);
 
@@ -118,12 +120,12 @@ public class AIBehaviour : MonoBehaviour
     {
         if (targetTunnel == null)
         {
-            int randTunnel = UnityEngine.Random.Range(0, tunnelHoles.Length);
+            int randTunnel = UnityEngine.Random.Range(0, tunnelHoles.Count);
             targetTunnel = tunnelHoles[randTunnel].transform;
 
             while (targetTunnel == closestTunnel)
             {
-                randTunnel = UnityEngine.Random.Range(0, tunnelHoles.Length);
+                randTunnel = UnityEngine.Random.Range(0, tunnelHoles.Count);
                 targetTunnel = tunnelHoles[randTunnel].transform;
 
                 if (targetTunnel != closestTunnel)
@@ -154,7 +156,13 @@ public class AIBehaviour : MonoBehaviour
     //logic for making tunnels
     public void MakeTunnel()
     {
+        GameObject newTunnel = Instantiate(tunnelHolePrefab);
+        newTunnel.transform.position = newTunnelPos.position;
+        tunnelHoles.Add(newTunnel);
 
+        aiController.ChooseAction();
+        aiController.preventDouble = false;
+        
     }
 
     //handles which behaviours to use

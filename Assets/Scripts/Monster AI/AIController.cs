@@ -19,6 +19,7 @@ public class AIController : MonoBehaviour
 
     [Header("Tunnels")]
     [SerializeField] private int maxTunnels;
+    public bool preventDouble;
 
     [Header("Stage Control")]
     public bool FrontStage;
@@ -136,7 +137,11 @@ public class AIController : MonoBehaviour
                 aiBehaviour.StartTunnel();
                 break;
             case "MakeTunnel":
-                aiBehaviour.MakeTunnel();
+                if (preventDouble == false)
+                {
+                    preventDouble = true;
+                    aiBehaviour.MakeTunnel();
+                }
                 break;
             case "ChargePlayer":
                 break;
@@ -164,7 +169,7 @@ public class AIController : MonoBehaviour
             aiBehaviour.target = DecideNextLocation(aiBehaviour.randomPointRange);
 
             //Gets the closest tunnel hole to the player
-            for (int i = 0; i < aiBehaviour.tunnelHoles.Length; i++)
+            for (int i = 0; i < aiBehaviour.tunnelHoles.Count; i++)
             {
                 float distance = Vector3.Distance(player.transform.position, aiBehaviour.tunnelHoles[i].transform.position);
 
@@ -204,14 +209,14 @@ public class AIController : MonoBehaviour
         float newScore = 0f;
         float smallestDist = 0f;
 
-        if (aiBehaviour.tunnelHoles.Length < maxTunnels)
+        if (aiBehaviour.tunnelHoles.Count < maxTunnels)
         {
             smallestDist = Vector3.Distance(transform.position, aiBehaviour.closestTunnel.position);
 
-            float tunnelsLeft = maxTunnels / aiBehaviour.tunnelHoles.Length;
-            float distValue = smallestDist * 0.025f;
+            float tunnelsLeft = maxTunnels / aiBehaviour.tunnelHoles.Count;
+            float distValue = smallestDist * 0.005f;
 
-            newScore = distValue / tunnelsLeft;
+            newScore = distValue * tunnelsLeft;
         }
 
         return newScore;
